@@ -1,3 +1,13 @@
+## Tech Stack Used
+
+- Vite – fast frontend build tool
+- React.js – component-based UI development
+- JavaScript (ES6+) – application logic
+- CSS3 – styling and layout
+- HTML5 – structure
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
