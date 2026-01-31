@@ -42,8 +42,33 @@ export default function CodeSpace() {
   };
 
   const runCode = () => {
-    setOutput(validateCode());
+    try {
+      if (language === "javascript") {
+        const fn = new Function(code + "; return twoSum([2,7,11,15],9);");
+        const result = fn();
+        setOutput("✅ Output: " + JSON.stringify(result));
+      }
+
+      if (language === "python") {
+        if (!code.includes("def")) {
+          setOutput("❌ Syntax Error: def missing");
+        } else {
+          setOutput("✅ Python code compiled successfully (mock)");
+        }
+      }
+
+      if (language === "cpp") {
+        if (!code.includes("int main")) {
+          setOutput("❌ C++ Error: main() not found");
+        } else {
+          setOutput("✅ C++ code compiled successfully (mock)");
+        }
+      }
+    } catch (err) {
+        setOutput("❌ Error: " + err.message);
+      }
   };
+
 
   return (
     <div className="code-space">
