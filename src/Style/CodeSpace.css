@@ -2,21 +2,38 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: 10px;
 }
 
+/* Language selector */
+.editor-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editor-top select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #dbeafe;
+  background: white;
+}
+
+/* Code editor */
 .code-space textarea {
   flex: 1;
-  background: #eef4ff;
+  background: #1f2937;     /* soft dark grey */
+  color: #e5e7eb; 
   border: none;
   border-radius: 12px;
   padding: 15px;
   font-family: monospace;
+  font-size: 14px;
 }
 
+/* Buttons */
 .controls {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .run {
@@ -37,9 +54,11 @@
   border-radius: 8px;
 }
 
+/* Output */
 .output {
-  margin-top: 10px;
   background: #eef4ff;
   padding: 10px;
   border-radius: 8px;
+  font-size: 14px;
+  color: #1e3a8a;
 }
