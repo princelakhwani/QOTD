@@ -1,0 +1,52 @@
+.qotd-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f7ff;
+  font-family: Inter, sans-serif;
+}
+
+/* Top bar */
+.top-bar {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-right {
+  display: flex;
+  gap: 20px;
+}
+
+/* Main content */
+.main-area {
+  flex: 1;
+  display: flex;
+}
+
+.problem-panel {
+  width: 40%;
+  background: white;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+}
+
+.editor-panel {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bottom */
+.bottom-area {
+  height: 160px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: 15px 20px;
+}
