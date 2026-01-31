@@ -4,4 +4,17 @@
   border: none;
   padding: 8px 14px;
   border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.subscribe:hover {
+  background: #1e40af;
+}
+
+/* After subscribed */
+.subscribe.subscribed {
+  background: #9ca3af;
+  cursor: not-allowed;
 }
