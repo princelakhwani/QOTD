@@ -6,7 +6,7 @@
   font-family: Inter, system-ui, sans-serif;
 }
 
-/* Top bar */
+/* ===================== TOP BAR ===================== */
 .top-bar {
   height: 60px;
   background: #ffffff;
@@ -17,66 +17,72 @@
   align-items: center;
 }
 
-/* Right side stats & subscribe */
 .top-right {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
-/* Main content */
+/* ===================== MAIN AREA ===================== */
 .main-area {
   flex: 1;
   display: flex;
+  min-height: 0;
 }
 
-/* Left side – only Problem now */
+/* ===================== LEFT PANEL ===================== */
 .left-panel {
   width: 38%;
   background: #ffffff;
-  padding: 20px;
-  overflow-y: auto;
   border-right: 1px solid #dbeafe;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
-/* Right side – Code editor */
+/* Problem content */
+.problem-area {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ===================== LEFT BOTTOM TABS ===================== */
+.left-bottom-tabs {
+  height: 48px;
+  display: flex;
+  border-top: 1px solid #dbeafe;
+  background: #ffffff;
+}
+
+.left-bottom-tabs button {
+  flex: 1;
+  border: none;
+  background: #f1f6ff;
+  cursor: pointer;
+  font-weight: 500;
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+.left-bottom-tabs button:hover {
+  background: #dbeafe;
+}
+
+/* Expandable area */
+.left-bottom-content {
+  max-height: 220px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-top: 1px solid #dbeafe;
+  padding: 16px;
+}
+
+/* ===================== RIGHT PANEL ===================== */
 .right-panel {
   width: 62%;
   background: #f1f6ff;
   padding: 20px;
   display: flex;
   flex-direction: column;
-}
-
-/* Bottom Tabs */
-.bottom-tabs {
-  height: 48px;
-  display: flex;
-  background: #ffffff;
-  border-top: 1px solid #dbeafe;
-}
-
-.bottom-tabs button {
-  flex: 1;
-  border: none;
-  background: #f1f6ff;
-  font-size: 14px;
-  cursor: pointer;
-  color: #1e3a8a;
-  font-weight: 500;
-}
-
-.bottom-tabs button:hover {
-  background: #dbeafe;
-}
-
-/* Expandable bottom content */
-.bottom-content {
-  background: #ffffff;
-  border-top: 1px solid #dbeafe;
-  padding: 20px;
-  max-height: 240px;
-  overflow-y: auto;
 }

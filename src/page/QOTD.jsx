@@ -24,32 +24,37 @@ export default function QOTD() {
 
       {/* Main Area */}
       <div className="main-area">
+
+        {/* LEFT SIDE */}
         <div className="left-panel">
-          <QuestionBox />
+          <div className="problem-area">
+            <QuestionBox />
+          </div>
+
+          {/* Bottom tabs (left only) */}
+          <div className="left-bottom-tabs">
+            <button onClick={() => setActiveTab(activeTab === "hint" ? null : "hint")}>
+              💡 Hint
+            </button>
+            <button onClick={() => setActiveTab(activeTab === "leaderboard" ? null : "leaderboard")}>
+              🏆 Leaderboard
+            </button>
+          </div>
+
+          {activeTab && (
+            <div className="left-bottom-content">
+              {activeTab === "hint" && <HintBox />}
+              {activeTab === "leaderboard" && <Leaderboard />}
+            </div>
+          )}
         </div>
 
+        {/* RIGHT SIDE */}
         <div className="right-panel">
           <CodeSpace />
         </div>
-      </div>
 
-      {/* Bottom Toggle Bar */}
-      <div className="bottom-tabs">
-        <button onClick={() => setActiveTab(activeTab === "hint" ? null : "hint")}>
-          💡 Hint
-        </button>
-        <button onClick={() => setActiveTab(activeTab === "leaderboard" ? null : "leaderboard")}>
-          🏆 Leaderboard
-        </button>
       </div>
-
-      {/* Expandable Content */}
-      {activeTab && (
-        <div className="bottom-content">
-          {activeTab === "hint" && <HintBox />}
-          {activeTab === "leaderboard" && <Leaderboard />}
-        </div>
-      )}
 
     </div>
   );
