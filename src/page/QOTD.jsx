@@ -5,8 +5,11 @@ import QuestionBox from "../components/QuestionBox";
 import Stats from "../components/Stats";
 import SubscribeBox from "../components/SubscribeBox";
 import "/src/page/QOTD.css";
+import { useState } from "react";
 
 export default function QOTD() {
+  const [activeTab, setActiveTab] = useState(null);
+
   return (
     <div className="qotd-page">
 
@@ -21,20 +24,32 @@ export default function QOTD() {
 
       {/* Main Area */}
       <div className="main-area">
-        <div className="problem-panel">
+        <div className="left-panel">
           <QuestionBox />
-          <HintBox />
         </div>
 
-        <div className="editor-panel">
+        <div className="right-panel">
           <CodeSpace />
         </div>
       </div>
 
-      {/* Bottom Area */}
-      <div className="bottom-area">
-        <Leaderboard />
+      {/* Bottom Toggle Bar */}
+      <div className="bottom-tabs">
+        <button onClick={() => setActiveTab(activeTab === "hint" ? null : "hint")}>
+          💡 Hint
+        </button>
+        <button onClick={() => setActiveTab(activeTab === "leaderboard" ? null : "leaderboard")}>
+          🏆 Leaderboard
+        </button>
       </div>
+
+      {/* Expandable Content */}
+      {activeTab && (
+        <div className="bottom-content">
+          {activeTab === "hint" && <HintBox />}
+          {activeTab === "leaderboard" && <Leaderboard />}
+        </div>
+      )}
 
     </div>
   );

@@ -2,24 +2,26 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #f4f7ff;
-  font-family: Inter, sans-serif;
+  background: #eef4ff;
+  font-family: Inter, system-ui, sans-serif;
 }
 
 /* Top bar */
 .top-bar {
   height: 60px;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-bottom: 1px solid #dbeafe;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Right side stats & subscribe */
 .top-right {
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  align-items: center;
 }
 
 /* Main content */
@@ -28,25 +30,53 @@
   display: flex;
 }
 
-.problem-panel {
-  width: 40%;
-  background: white;
+/* Left side – only Problem now */
+.left-panel {
+  width: 38%;
+  background: #ffffff;
   padding: 20px;
   overflow-y: auto;
-  border-right: 1px solid #e5e7eb;
+  border-right: 1px solid #dbeafe;
+  display: flex;
+  flex-direction: column;
 }
 
-.editor-panel {
-  width: 60%;
+/* Right side – Code editor */
+.right-panel {
+  width: 62%;
+  background: #f1f6ff;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* Bottom */
-.bottom-area {
-  height: 160px;
-  background: white;
-  border-top: 1px solid #e5e7eb;
-  padding: 15px 20px;
+/* Bottom Tabs */
+.bottom-tabs {
+  height: 48px;
+  display: flex;
+  background: #ffffff;
+  border-top: 1px solid #dbeafe;
+}
+
+.bottom-tabs button {
+  flex: 1;
+  border: none;
+  background: #f1f6ff;
+  font-size: 14px;
+  cursor: pointer;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.bottom-tabs button:hover {
+  background: #dbeafe;
+}
+
+/* Expandable bottom content */
+.bottom-content {
+  background: #ffffff;
+  border-top: 1px solid #dbeafe;
+  padding: 20px;
+  max-height: 240px;
+  overflow-y: auto;
 }
